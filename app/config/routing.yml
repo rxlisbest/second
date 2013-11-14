@@ -1,0 +1,4 @@
+shandong_opera:
+    resource: "@ShandongOperaBundle/Resources/config/routing.yml"
+    prefix:   /
+

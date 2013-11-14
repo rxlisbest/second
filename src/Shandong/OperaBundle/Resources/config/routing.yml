@@ -1,0 +1,3 @@
+shandong_opera_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ShandongOperaBundle:Default:index }

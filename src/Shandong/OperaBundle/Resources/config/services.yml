@@ -1,0 +1,7 @@
+parameters:
+#    shandong_opera.example.class: Shandong\OperaBundle\Example
+
+services:
+#    shandong_opera.example:
+#        class: %shandong_opera.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
