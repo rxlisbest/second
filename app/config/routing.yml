@@ -1,3 +1,7 @@
+shandong_opera_admin:
+    resource: "@ShandongOperaAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 shandong_opera:
     resource: "@ShandongOperaBundle/Resources/config/routing.yml"
     prefix:   /

@@ -1,0 +1,9 @@
+shandong_opera_admin_homepage:
+    pattern:  /admin/{name}
+    defaults: { _controller: ShandongOperaAdminBundle:Default:index }
+
+
+shandong_opera_admin_news_class:
+    pattern:  /admin/news_class/
+    defaults: { _controller: ShandongOperaAdminBundle:Newsclass:AddBigClass }
+

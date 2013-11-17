@@ -133,6 +133,23 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/admin')) {
+            // shandong_opera_admin_homepage
+            if (preg_match('#^/admin/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'shandong_opera_admin_homepage')), array (  '_controller' => 'Shandong\\OperaAdminBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // shandong_opera_admin_news_class
+            if (rtrim($pathinfo, '/') === '/admin/news_class') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'shandong_opera_admin_news_class');
+                }
+
+                return array (  '_controller' => 'Shandong\\OperaAdminBundle\\Controller\\NewsclassController::AddBigClassAction',  '_route' => 'shandong_opera_admin_news_class',);
+            }
+
+        }
+
         // shandong_opera_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'shandong_opera_homepage')), array (  '_controller' => 'Shandong\\OperaBundle\\Controller\\DefaultController::indexAction',));
